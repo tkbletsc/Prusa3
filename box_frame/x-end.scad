@@ -76,7 +76,7 @@ module x_end_base(vfillet=[3, 3, 3, 3], thru=true, len=40, offset=0){
                 //rotate([0, 0, 0]) translate([0, -9.5, 0]) 
                 translate([z_delta, 0, 0]) render(convexity = 5) linear(bushing_z, bearing_height);
                 // Nut trap
-                translate([-2, 18, 5]) cube_fillet([20, 14, 10], center = true, vertical=[8, 0, 0, 5]);
+                #translate([-1, 19, 5]) cube([21, 15, 10], center = true);
                 //}
             }
         }
@@ -99,9 +99,9 @@ module x_end_base(vfillet=[3, 3, 3, 3], thru=true, len=40, offset=0){
         translate([0, 0, 5 - bushing_xy[0]]) {  // m5 nut insert
             translate([0, 17, 0]) rotate([0, 0, 10]){
                 //rod
-                translate([0, 0, -1]) cylinder(h=(4.1 / 2 + 5), r=3, $fn=32);
+                translate([0, 0, -1]) cylinder(h=(4.1 / 2 + 5), r=4, $fn=32);
                 //nut
-                translate([0, 0, 9]) cylinder(r=4.6, h=14.1, center = true, $fn=6);
+                translate([0, 0, 9]) rotate([0, 0, 50]) cylinder(r=7.5, h=14.1, center = true, $fn=6);
 
             }
         }
