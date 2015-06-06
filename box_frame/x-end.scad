@@ -76,7 +76,7 @@ module x_end_base(vfillet=[3, 3, 3, 3], thru=true, len=40, offset=0){
                 //rotate([0, 0, 0]) translate([0, -9.5, 0]) 
                 translate([z_delta, 0, 0]) render(convexity = 5) linear(bushing_z, bearing_height);
                 // Nut trap
-                #translate([-1, 19, 5]) cube([21, 15, 10], center = true);
+                translate([-1, 18, 5]) cube([21, 18, 10], center = true);
                 //}
             }
         }
