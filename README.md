@@ -3,7 +3,7 @@ Published under GPL v3
 
 Forked from [josefprusa's Prusa i3](https://github.com/josefprusa/Prusa3/) repo.
 
-This build has been modified to use only M8/ 5.16" threaded rod with a laser cut wood/plastic frame. Models have been exported individually for ease of printing on differently sized machines.
+This build has been modified to use only M8/ 5/16" threaded rod with a laser cut wood/plastic frame. Models have been exported individually for ease of printing on differently sized machines.
 
 Printed Parts
 -------------
