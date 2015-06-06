@@ -24,7 +24,7 @@ geeksbase_mount=512;
 malcolm_extrusion_mount=1024;	//broken
 
 //default_extruder_mount=malcolm_extrusion_mount;
-default_extruder_mount=groovemount;
+default_extruder_mount=jhead_mount;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -284,28 +284,28 @@ module wade(
 			}
 
 			// The idler hinge support.
-			translate(idler_fulcrum)
-			{
-				rotate(-15)
-				translate([-(idler_hinge_r+3),-idler_hinge_r-2,-wade_block_depth/2])
-				difference()
-				{
-				cube([idler_hinge_r+3,
-					idler_hinge_r*2+4,
-					wade_block_depth/2-
-					idler_short_side/2+
-					idler_hinge_width+0.25+
-					layer_thickness]);
-				translate([idler_hinge_r+2,(idler_hinge_r*2+4)/2,layer_thickness*3])
-				cylinder(r=idler_hinge_r+1,h=10,$fn=50);
-				}
-				rotate(-15)
-				translate([-(idler_hinge_r+3),-idler_hinge_r-2,
-					-idler_short_side/2+idler_hinge_width+0.25])
-				cube([idler_hinge_r+3+15,
-					idler_hinge_r*2+4,
-					layer_thickness]);
-			}
+//			translate(idler_fulcrum)
+//			{
+//				rotate(-15)
+//				translate([-(idler_hinge_r+3),-idler_hinge_r-2,-wade_block_depth/2])
+//				difference()
+//				{
+//				cube([idler_hinge_r+3,
+//					idler_hinge_r*2+4,
+//					wade_block_depth/2-
+//					idler_short_side/2+
+//					idler_hinge_width+0.25+
+//					layer_thickness]);
+//				translate([idler_hinge_r+2,(idler_hinge_r*2+4)/2,layer_thickness*3])
+//				cylinder(r=idler_hinge_r+1,h=10,$fn=50);
+//				}
+//				rotate(-15)
+//				translate([-(idler_hinge_r+3),-idler_hinge_r-2,
+//					-idler_short_side/2+idler_hinge_width+0.25])
+//				cube([idler_hinge_r+3+15,
+//					idler_hinge_r*2+4,
+//					layer_thickness]);
+//			}
 
 			//The base.
 			translate([-base_leadout,-base_thickness/2,0])
@@ -613,7 +613,7 @@ module wadeidler()
 		}
 
 		//Fulcrum hole.
-		translate(idler_fulcrum)
+		#translate(idler_fulcrum)
 		rotate(180/8)
 		cylinder(h=idler_short_side+2,r=m3_diameter/2-0.1,center=true,$fn=8);
 
