@@ -99,12 +99,12 @@ module nema17(places=[1,1,1,1], size=15.5, h=10, holes=false, shadow=false, $fn=
                     rotate([0, 0, -90*i])  translate([0,0,-10]) screw(r=1.7, slant=false, head_drop=13, $fn=$fn, h=h+12);
                 } else {
                     rotate([0, 0, -90*i]) cylinder(h=h, r=5.5, $fn=$fn);
-                }
+                } 
             }
         }
     }
     if (shadow != false) {
-        %translate ([0, 0, shadow+21+3]) cube([42,42,42], center = true);
+        %translate ([0, 0, shadow+17.5+3]) cube([42,42,35], center = true);
     //flange
         %translate ([0, 0, shadow+21+3-21-1]) cylinder(r=11,h=2, center = true, $fn=20);
     //shaft
