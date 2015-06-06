@@ -43,6 +43,7 @@ module leftfront(thru = false){
             //threaded rods across (short)
             translate([0,11,10]) rotate([0,0,0]) nutrod();
             translate([0,11,30]) rotate([0,0,0]) nutrod();
+            #translate([-1,11,42]) rotate([0,90,0]) cylinder(h = 270, r = 1.5, $fn=12);
             //threaded rod along (long, M10)
             translate([11, 0, 14.6 + y_threaded_rod_long_r]) rotate([0,0,90]) nutrod(r=y_threaded_rod_long_r);
 
@@ -60,11 +61,11 @@ module leftfront(thru = false){
 }
 
 leftfront();
-translate([40,0,0]) mirror([1,0,0]) leftfront();
+translate([25,0,0]) mirror([1,0,0]) leftfront();
 //translate([12,2,28]) rotate([0,0,0]) cube([10,4,1], center=true);
 
-translate([0,40,0]) {
+translate([0,25,0]) {
     leftfront();
-    translate([40,0,0]) mirror([1,0,0]) leftfront();
+    translate([25,0,0]) mirror([1,0,0]) leftfront();
     //translate([12,2,28]) rotate([0,0,0]) cube([10,4,1], center=true);
 }
