@@ -370,7 +370,7 @@ echo("bhmh", mounting_holes)
 	}
 
 	//carriage mountig holes
-	#translate([-24.5+64+4,-0.5,3]) {
+	translate([-24.5+64+4,-0.5,3]) {
 		translate([-50,0,0]) {
 			translate([0,0,(wade_block_depth+base_extra_depth)/2+4+layer_thickness]) cylinder(r=m3_diameter/2, h=wade_block_depth+base_extra_depth, center=true);
 			translate([0, 0, 1]) cylinder(r=m3_washer_diameter/2, h=10.1, center=true);
@@ -417,8 +417,8 @@ echo("bhmh", mounting_holes)
 			translate([-13,0,9.5])
 			b608(h=wade_block_depth);
 		
-			translate([0,0,8+layer_thickness])
-			cylinder(r=m8_clearance_hole/2,h=wade_block_depth-(8+layer_thickness)+2);	
+			translate([0,0,8+layer_thickness-2])
+			cylinder(r=m8_clearance_hole/2,h=wade_block_depth-(8+layer_thickness)+4);	
 
 			translate([0,0,20-2])
 			cylinder(r=16/2,h=wade_block_depth-(8+layer_thickness)+2);	
@@ -508,18 +508,18 @@ module motor_mount_holes()
 	slot_right=2;
 
 	{
-		translate([0,0,screw_head_recess_depth+layer_thickness])
+		#translate([0,0,screw_head_recess_depth+layer_thickness])
 		for (hole=[0:3])
 		translate([motor_hole(hole)[0],motor_hole(hole)[1],0])
 		rotate([0,0,25])
 		{
-			translate([-slot_left,0,0])
-			cylinder(h=motor_mount_thickness-screw_head_recess_depth,r=radius,$fn=16);
-			translate([slot_right,0,0])
-			cylinder(h=motor_mount_thickness-screw_head_recess_depth,r=radius,$fn=16);
+			translate([-slot_left,0,-2])
+			cylinder(h=motor_mount_thickness-screw_head_recess_depth+4,r=radius,$fn=16);
+			translate([slot_right,0,-2])
+			cylinder(h=motor_mount_thickness-screw_head_recess_depth+4,r=radius,$fn=16);
 
-			translate([-slot_left,-radius,0])
-			cube([slot_left+slot_right,radius*2,motor_mount_thickness-screw_head_recess_depth]);
+			translate([-slot_left,-radius,-2])
+			cube([slot_left+slot_right,radius*2,motor_mount_thickness-screw_head_recess_depth+4]);
 		}
 
 		translate([0,0,-1])
