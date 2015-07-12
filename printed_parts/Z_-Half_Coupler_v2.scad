@@ -33,8 +33,8 @@ total_len = 30; // Coupler Length
 
 // Mounting Screw specs
 screw_r = 3/2;
-screw_nut = 5.8/2;
-screw_head = 5/2;
+screw_nut = 3.5; // 5.8/2;
+screw_head = 3.5; // 5/2;
 
 gap_size = .4; // Space to remove between the two halves (x2), should be same as flex_chamber_size to avoid edges
 
