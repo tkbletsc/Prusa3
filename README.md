@@ -18,6 +18,7 @@ Additionally added models are:
 
  * [Parametric pulley](https://www.thingiverse.com/thing:16627) by droftarts, released CC-BY-SA.
  * [Z half coupler v2](https://www.thingiverse.com/thing:22422) by deezmaker, released GPLv3.
+ * [spring](https://www.thingiverse.com/thing:21234) by obijuan, released CC-BY-SA.
 
 Frame
 -----
