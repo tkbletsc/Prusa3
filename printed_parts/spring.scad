@@ -213,7 +213,7 @@ module spring_octogonal(fid=3, th=2, folds=8, hexa_diam=13 ,drill=8,offs=0)
 
 //-- This is the one used as a z axis spring on the Prusa Mendel
 //translate([0,0,0])
-spring_hexagonal(fid=3, th=2, folds=4, hexa_diam=14.6, drill=8, offs=0);
+spring_hexagonal(fid=3, th=1.5, folds=4, hexa_diam=10, drill=4, offs=0);
 
 //translate([30,0,0])
 //spring_octogonal(fid=4, th=2, folds=6, hexa_diam=22, drill=14);
