@@ -1,7 +1,16 @@
 .*
 *.gcode
-box_frame/output/*.stl
-box_frame/output/extras/*.stl
-single_plate/output/*.stl
 tags
-configuration.scad
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*

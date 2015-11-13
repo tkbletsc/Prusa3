@@ -180,7 +180,8 @@ module zrodholder2(thickness=(i_am_box == 0 ? 14 : 15), bottom_thickness=5, ylen
     }
 }
 
-translate([10, -50, 0]) zmotorholder();
-translate([0, 50, 0]) mirror([0, 1, 0]) zmotorholder();
+// tkb subtract 30 from X on the motor holders because i think they're colliding (?!)
+translate([10-30, -50, 0]) zmotorholder(); 
+translate([0-30, 50, 0]) mirror([0, 1, 0]) zmotorholder();
 translate([67, 14, 0]) rotate([0,0,90]) zrodholder2();
 translate([77, -14, 0]) rotate([0, 0, -90]) mirror([0, 1, 0]) zrodholder2();

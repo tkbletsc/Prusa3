@@ -93,7 +93,7 @@ carriage_l_base = 50;
 use_fillets = 1;
 
 // set to 0 for single plate (affects z axis and screws that attach RP parts to frame)
-i_am_box = 0;
+i_am_box = 1;
 
 // if you do your own plate and can move bottom Z screws 5mm up set this to 0 to
 // get stronger motor mount. Only for i_am_box = 0
@@ -121,7 +121,7 @@ y_threaded_rod_long_r = 4.4;
 // Use 12 for single plate
 // or 20 if you want to use the Y lm8uu holders
 // (extras/bearing-holder-single-plate-y)
-board_thickness = 12;
+board_thickness = 20;
 
 // Segments of small holes. some poeple claim that a low value makes them easier to print.
 small_hole_segments=7;

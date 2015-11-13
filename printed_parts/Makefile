@@ -1,4 +1,5 @@
 #openscad -o output/bushing.stl bushing.scad
+OPENSCAD="/c/Program Files/OpenSCAD/openscad.exe"
 
 # Type of 3D Model file to output. Known to work with AMF or STL.
 OUTPUT_TYPE=stl
@@ -18,7 +19,7 @@ STL_EXTRAS = $(STL_EXTRAS_1:%.scad=%.$(OUTPUT_TYPE))
 extras: $(STL_EXTRAS)
 
 output/%.$(OUTPUT_TYPE): %.scad $(INCLUDES) configuration.scad
-	openscad -o $@ $<
+	$(OPENSCAD) -o $@ $<
 
 clean:
 	rm output/*.$(OUTPUT_TYPE) output/*.gcode output/extras/*.stl output/extras/*.gcode
